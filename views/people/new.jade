@@ -1,0 +1,16 @@
+extends ../layout
+block content
+  h1 Add Yourself a Person
+  each err in errors
+    p.error= err
+  form(action='/people/new' method='post')
+    label Name
+    p
+      input(type='text' name='human')
+    p
+    label Hobby
+    p
+      input(type='text' name='hobby')
+    p
+    input(type='submit' value='Add A Person')
+  script('../public/stylesheets/style.css')

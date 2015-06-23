@@ -1,0 +1,17 @@
+extends ../layout
+block content
+
+  h1 Add Yourself a Puppy
+  each err in errors
+    p.error= err
+  form(action='/puppy/new' method='post')
+    label Name
+    p
+      input(type='text' name='pupname')
+    p
+    label Puppy ID
+    p
+      input(type='text' name='pupid')
+    p
+    input(type='submit' value='Add Pup')
+  script(src='../public/stylesheets/style.css')

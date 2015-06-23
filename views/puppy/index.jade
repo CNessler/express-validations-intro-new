@@ -1,0 +1,15 @@
+extends ../layout
+block content
+  h1 Puppy List
+  table
+    thead
+      tr
+        th Name
+        th ID
+    tbody
+      each pup in puppyinfo
+        tr
+          td= pup.puppyname
+          td= pup.pupid
+  
+    
